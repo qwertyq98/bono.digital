@@ -1,0 +1,7 @@
+// MIXINS
+
+@mixin set-font-size($font, $line, $weight) {
+  font-size: $font;
+  font-weight: $weight;
+  line-height: $line;
+}

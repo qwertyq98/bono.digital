@@ -1,0 +1,124 @@
+@import 'colors.scss';
+@import 'constants.scss';
+
+.header {
+  background-color: $white;
+  padding: 9px 50px 12px 51px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 45px;
+  position: fixed;
+  width: calc(100% - 101px);
+  max-width: 1590px;
+  z-index: 100;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__logo {
+    height: 35px;
+    width: 150px;
+    padding-right: 19px;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    height: 42px;
+    border-left: 1px solid $grey;
+    align-items: center;
+    padding-left: 24px;
+    list-style-type: none;
+  }
+
+  &__button {
+    color: $blue;
+    padding-right: 42px;
+    @include set-font-size(16px, 19.09px, 400);
+    cursor: pointer;
+
+    &:last-child {
+      padding-right: 0;
+      color: $bright-blue;
+      padding: 8px 28px 9px 32px;
+      border: 1px solid $bright-blue;
+    }
+  }
+
+  &__burger {
+    display: none;
+  }
+
+  &__icon {
+    width: 27px;
+    height: 19px;
+    padding-right: 13px;
+    cursor: pointer;
+
+    &:last-child {
+      padding-right: 0;
+      width: 26px;
+      height: 26px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    &__button {
+      padding-right: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    padding: 16px 27px 14px;
+    width: calc(100% - 54px);
+    height: 35px;
+
+    &__wrapper {
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    &__buttons {
+      border: none;
+      display: none;
+      padding: 0;
+    }
+
+    &__button {
+      display: none;
+    }
+  
+    &__burger {
+      display: inline-block;
+      cursor: pointer;
+      background-image: url('/images/burger.svg');
+      width: 25px;
+      height: 21px;
+
+      &_active {
+        background-image: url('/images/close.svg');
+        width: 22px;
+      }
+    }
+  
+    &__icon {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .header {
+    width: calc(100% - 40px);
+    padding: 16px 20px 14px;
+  }
+}

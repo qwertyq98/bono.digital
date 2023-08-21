@@ -1,0 +1,176 @@
+@import 'colors.scss';
+@import 'constants.scss';
+
+.footer {
+  background-color: $blue;
+  padding: 140px 220px 161px;
+  margin: 0 auto;
+
+  &__title {
+    @include set-font-size(60px, 84px, 300);
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__form {
+    max-width: 800px;
+    width: 100%;
+    padding: 62px 0 100px;
+    text-align: end;
+    margin: 0 auto;
+  }
+  
+  &__form-user {
+    display: flex;
+    flex-direction: row;
+    max-width: 800px;
+    justify-content: space-between;
+    margin-bottom: 26px;
+  }
+
+  &__form-input {
+    width: 100%;
+    max-width: 387px;
+    height: 50px;
+    padding: 12px 19px 13px;
+    box-sizing: border-box;
+    background-color: $white;
+    color: $blue;
+    outline: none;
+    border: none;
+    @include set-font-size(18px, 25.2px, 400);
+  }
+
+  &__form-input {
+    &:first-child {
+      margin-right: 26px;
+    }
+
+    &_text {
+      height: 120px;
+      resize: none;
+      max-width: 100%;
+      margin: 0;
+      font-family: 'Helvetica Neue';
+    }
+
+    &_error {
+      border: 3px solid $red;
+    }
+  }
+
+  &__form-button {
+    margin-top: 28px;
+    width: 240px;
+    height: 71px;
+    padding: 26px 14px 25px;
+    color: $white;
+    letter-spacing: 0.59rem;
+    background-color: $bright-blue;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__email {
+    @include set-font-size(40px, 56px, 300);
+    text-align: center;
+    margin: 0;
+  }
+
+  &__phone {
+    @include set-font-size(32px, 45px, 300);
+    text-align: center;
+    margin: 0;
+  }
+
+  &__info {
+    @include set-font-size(18px, 25px, 300);
+    text-align: center;
+    padding-top: 20px;
+    margin: 0;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footer {
+    &__form-user {
+      max-width: 100%;
+    }
+
+    &__title {
+      @include set-font-size(50px, 70px, 300);
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .footer {
+    padding: 100px 70px 90px;
+
+    &__title {
+      @include set-font-size(50px, 70px, 300);
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .footer {
+    padding: 76px 20px 113px;
+
+    &__title {
+      @include set-font-size(40px, 56px, 300);
+    }
+
+    .footer__form {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .footer {
+    &__title {
+      height: 116px;
+    }
+
+    &__form {
+      padding: 80px 0 101px;
+    }
+
+    &__form-user {
+      flex-direction: column;
+    }
+
+
+    &__form-input {
+      &:first-child {
+        margin-right: 0;
+        margin-bottom: 27px;
+      }
+
+      &_text {
+        height: 125px;
+      }
+    }
+
+    &__form-button {
+      margin-top: 138px;
+      letter-spacing: 0.3rem;
+    }
+
+    &__email {
+      @include set-font-size(28px, 39px, 300);
+    }
+  
+    &__phone {
+      @include set-font-size(22px, 30px, 300);
+    }
+  
+    &__info {
+      @include set-font-size(18px, 25px, 300);
+    }
+  }
+}

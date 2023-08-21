@@ -1,0 +1,157 @@
+@import 'colors.scss';
+@import 'constants.scss';
+
+.speakers {
+  padding: 72px 125px 62px;
+  max-width: 934px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 75px;
+
+  &__title {
+    @include set-font-size(60px, 84px, 300);
+    color: $blue;
+    padding-left: 70px;
+    margin: 0 0 49px;
+  }
+
+  &__card {
+    flex-direction: column;
+    display: flex;
+    position: relative;
+    z-index: -10;
+    width: 378px;
+    height: 376px;
+  }
+
+  &__container {
+    max-width: 798px;
+    width: 100%;
+    position: static;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+
+  &__info {
+    position: absolute;
+    bottom: 0;
+    height: 111px;
+    background-color: $transparent-blue;
+    width: 100%;
+    padding: 25px 30px 26px;
+    box-sizing: border-box;
+  }
+
+  &__name {
+    @include set-font-size(24px, 24px, 500);
+    margin: 0;
+    padding-bottom: 18px;
+  }
+
+  &__position {
+    @include set-font-size(18px, 18px, 400);
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .speakers {
+    padding: 62px 125px 62px;
+    max-width: 1218px;
+  
+    &__container {
+      max-width: 1218px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .speakers {
+    padding: 62px 30px 62px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .speakers {
+    padding: 27px 0 81px;
+    margin-bottom: 21px;
+
+    &__container {
+      max-width: 626px;
+    }
+  
+    &__title {
+      @include set-font-size(50px, 70px, 300);
+      margin: 0 0 63px;
+    }
+  
+    &__card {
+      width: 294px;
+      height: 292px;
+    }
+
+    &__info {
+      height: 85px;
+      padding: 10px 20px 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .speakers {
+    padding: 27px 21px 81px;
+    box-sizing: border-box;
+
+    &__container {
+      max-width: 279px;
+    }
+
+    &__title {
+      padding: 0;
+    }
+  
+    &__card {
+      width: 279px;
+      height: 277px;
+    }
+
+    &__info {
+      height: 85px;
+      padding: 10px 20px 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .speakers {
+    padding: 0 20px 70px;
+    margin-bottom: 32px;
+
+    &__container {
+      max-width: 279px;
+    }
+
+    &__title {
+      @include set-font-size(40px, 56px, 300);
+      margin-bottom: 49px;
+    }
+  
+    &__card {
+      width: 279px;
+      height: 277px;
+    }
+
+    &__name {
+      @include set-font-size(17.7px, 17.7px, 500);
+      padding-bottom: 18px;
+    }
+  
+    &__position {
+      @include set-font-size(13.3px, 13.3px, 400);
+    }
+
+    &__info {
+      padding: 20px 20px 15px;
+    }
+  }
+}
