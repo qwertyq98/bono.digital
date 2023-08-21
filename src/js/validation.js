@@ -36,6 +36,7 @@ export default class Validator {
 
       if (isValid) {
         this._submitCallback(this._getInputValues());
+        this._form.reset();
       }
     });
   }
