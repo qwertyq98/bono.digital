@@ -82,6 +82,8 @@
     @include set-font-size(32px, 45px, 300);
     text-align: center;
     margin: 0;
+    color: $white;
+    text-decoration: none;
   }
 
   &__info {
