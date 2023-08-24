@@ -21,12 +21,10 @@ export default class Validator {
     this._form.addEventListener('submit', evt => {
       evt.preventDefault();
 
-      const formValuesInputs = {};
       let isValid = true; 
       
       this._inputList.forEach(input => {
         if (input.checkValidity()) {
-          formValuesInputs[input.name] = input.value;
           input.classList.remove('footer__form-input_error');
         } else {
           isValid = false;
